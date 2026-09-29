@@ -2,6 +2,11 @@ import { useState } from "react";
 import { ArrowUpRight, BriefcaseBusiness, Instagram, Link2, MessageCircle, WandSparkles } from "lucide-react";
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/paulo-moraes-logo.png.asset.json";
+import aniversarioAsset from "@/assets/foto-aniversario.png.asset.json";
+import gestacaoAsset from "@/assets/foto-gestacao.png.asset.json";
+import formaturaAsset from "@/assets/foto-formatura.png.asset.json";
+import familiaNatalAsset from "@/assets/foto-familia-natal.png.asset.json";
+import casalGramadoAsset from "@/assets/foto-casal-gramado.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
