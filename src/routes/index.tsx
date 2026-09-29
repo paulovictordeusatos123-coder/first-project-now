@@ -227,7 +227,7 @@ function Index() {
       </section>
 
       <footer className="border-t border-white/10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-7 text-sm text-white/35 sm:flex-row sm:items-center sm:justify-between lg:px-8"><span>Paulo Moraes</span><span>© 2026 — Criação digital, sites e imagens com IA.</span><span>Fotos: Ketut Subiyanto e RDNE Stock project / Pexels</span></div>
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-7 text-sm text-white/35 sm:flex-row sm:items-center sm:justify-between lg:px-8"><span>© 2026 — Criação digital, sites e imagens com IA.</span><span>Imagens geradas com inteligência artificial.</span></div>
       </footer>
     </main>
   );
