@@ -7,6 +7,7 @@ import gestacaoAsset from "@/assets/foto-gestacao.png.asset.json";
 import formaturaAsset from "@/assets/foto-formatura.png.asset.json";
 import familiaNatalAsset from "@/assets/foto-familia-natal.png.asset.json";
 import casalGramadoAsset from "@/assets/foto-casal-gramado.png.asset.json";
+import bebeBailarinaAsset from "@/assets/foto-bebe-bailarina.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -67,6 +68,11 @@ const aiPhotos = [
     url: casalGramadoAsset.url,
     type: "Retratos de momentos",
     alt: "Casal sorrindo em frente ao mural de corações em Gramado",
+  },
+  {
+    url: bebeBailarinaAsset.url,
+    type: "Retratos de momentos",
+    alt: "Bebê sorridente com vestido rosa de bailarina ao lado do espelho e da barra de ballet",
   },
 ];
 
