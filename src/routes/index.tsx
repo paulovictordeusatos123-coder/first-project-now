@@ -69,6 +69,11 @@ const aiPhotos = [
     type: "Retratos de momentos",
     alt: "Casal sorrindo em frente ao mural de corações em Gramado",
   },
+  {
+    url: bebeBailarinaAsset.url,
+    type: "Retratos de momentos",
+    alt: "Bebê sorridente com vestido rosa de bailarina ao lado do espelho e da barra de ballet",
+  },
 ];
 
 const projects = [
