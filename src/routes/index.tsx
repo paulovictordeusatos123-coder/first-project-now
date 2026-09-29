@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowUpRight, BriefcaseBusiness, Instagram, Link2, MessageCircle, WandSparkles } from "lucide-react";
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/paulo-moraes-logo.png.asset.json";
@@ -153,9 +153,38 @@ const projects = [
 
 function Index() {
   const [photoFilter, setPhotoFilter] = useState<string | null>(null);
+  const [introVisible, setIntroVisible] = useState(true);
   const visiblePhotos = photoFilter ? aiPhotos.filter((photo) => photo.type === photoFilter) : aiPhotos;
+
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const timer = setTimeout(() => {
+      setIntroVisible(false);
+      document.body.style.overflow = previousOverflow;
+    }, 3300);
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, []);
+
   return (
     <main className="min-h-screen overflow-hidden bg-[#050505] text-white">
+      {introVisible && (
+        <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-[100]">
+          <div className="intro-panel intro-panel-top absolute inset-x-0 top-0 h-1/2 bg-[#050505]" />
+          <div className="intro-panel intro-panel-bottom absolute inset-x-0 bottom-0 h-1/2 bg-[#050505]" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-7">
+            <div className="relative flex h-40 w-40 items-center justify-center">
+              <div className="intro-glow absolute inset-0 rounded-full bg-white/20 blur-3xl" />
+              <img src={logoAsset.url} alt="" className="intro-logo relative h-32 w-32 rounded-3xl border border-white/15 object-cover shadow-2xl shadow-black" />
+            </div>
+            <div className="intro-line h-px w-28 bg-white/50" />
+            <p className="intro-tagline text-[11px] uppercase tracking-[0.4em] text-white/60">Paulo Moraes</p>
+          </div>
+        </div>
+      )}
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#050505]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8">
           <a href="#inicio" className="flex items-center gap-3">
@@ -173,16 +202,16 @@ function Index() {
 
       <section id="inicio" className="relative flex min-h-screen items-center pt-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_35%,rgba(255,255,255,0.09),transparent_30%),radial-gradient(circle_at_15%_80%,rgba(255,255,255,0.04),transparent_28%)]" />
-        <div className="relative mx-auto grid max-w-6xl gap-14 px-5 py-20 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:px-8">
+          <div className="relative mx-auto grid max-w-6xl gap-14 px-5 py-20 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:px-8">
           <div>
-            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs uppercase tracking-[0.2em] text-white/55"><span className="h-1.5 w-1.5 rounded-full bg-white" />Design digital • Sites • IA</div>
-            <h1 className="max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-8xl">Seu trabalho merece ser visto da melhor forma!</h1>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <div className="rise-1 mb-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs uppercase tracking-[0.2em] text-white/55"><span className="h-1.5 w-1.5 rounded-full bg-white" />Design digital • Sites • IA</div>
+            <h1 className="rise-2 max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-8xl">Seu trabalho merece ser visto da melhor forma!</h1>
+            <div className="rise-3 mt-9 flex flex-col gap-3 sm:flex-row">
               <a href="#projetos" className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-black transition hover:scale-[1.02]">Ver meu portfólio <ArrowUpRight size={17} /></a>
               <a href="#contato" className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3.5 text-sm font-medium text-white/80 transition hover:border-white/30 hover:bg-white/[0.05]">Falar comigo</a>
             </div>
           </div>
-          <div className="relative mx-auto w-full max-w-md">
+          <div className="rise-4 relative mx-auto w-full max-w-md">
             <div className="aspect-square overflow-hidden rounded-[2rem] border border-white/10 bg-[#080808] shadow-2xl shadow-black">
               <img src={logoAsset.url} alt="Paulo Moraes Digital Creative Studio" className="h-full w-full scale-[1.6] object-cover" fetchPriority="high" />
             </div>
