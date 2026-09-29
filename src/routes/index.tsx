@@ -50,6 +50,24 @@ const projects = [
     description: "Site profissional desenvolvido para apresentar o negócio e seus serviços.",
     url: "http://grupovertice.rmbuilder.site/vertice-auto-center",
   },
+  {
+    title: "Atelier barbers",
+    category: "Site profissional",
+    description: "Site profissional desenvolvido para apresentar a barbearia e seus serviços.",
+    url: "https://barber-sparkle-kit.lovable.app/",
+  },
+  {
+    title: "ML estética",
+    category: "Site profissional",
+    description: "Site profissional desenvolvido para apresentar a clínica e seus serviços de estética.",
+    url: "https://clinicademoml.lovable.app/",
+  },
+  {
+    title: "RG relogios",
+    category: "Site profissional",
+    description: "Site profissional desenvolvido para apresentar a marca e seus produtos.",
+    url: "https://rgrelogios.lovable.app/",
+  },
 ]
 
 function Index() {
