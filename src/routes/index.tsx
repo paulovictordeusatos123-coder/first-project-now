@@ -154,9 +154,9 @@ function Index() {
                       <span className="text-5xl font-semibold tracking-tighter text-white/10">0{index + 1}</span>
                       <p className="mt-2 text-xs uppercase tracking-[0.25em] text-white/30">{project.category}</p>
                     </div>
-                  </a>
+                  </div>
                   <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/70 to-transparent" />
-                </div>
+                </a>
                 <div className="p-6">
                   <p className="text-xs uppercase tracking-[0.18em] text-white/30">{project.category}</p>
                   <h3 className="mt-2 text-xl font-medium">{project.title}</h3>
