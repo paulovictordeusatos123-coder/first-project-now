@@ -199,31 +199,67 @@ function Index() {
             </div>
             <p className="max-w-md text-sm leading-6 text-white/40">Uma seleção de projetos desenvolvidos para profissionais e negócios que querem apresentar seu trabalho de forma mais profissional na internet.</p>
           </div>
-          <div className="mt-14 grid gap-5 md:grid-cols-3">
-            {projects.map((project, index) => (
-              <article key={project.title} className="group overflow-hidden rounded-3xl border border-white/10 bg-[#090909]">
-                <a href={project.url} target="_blank" rel="noreferrer" className="relative block aspect-[4/3] overflow-hidden bg-black">
-                  <img
-                    src={`https://api.microlink.io/?url=${encodeURIComponent(project.url)}&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1200&viewport.height=900`}
-                    alt={`Capa do site ${project.title}`}
-                    className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/80 to-transparent" />
-                  <div className="absolute left-4 top-4 rounded-full border border-white/15 bg-black/60 px-3 py-1 text-xs text-white/70 backdrop-blur-sm">
-                    {project.category === "Bio personalizada" ? "Bio personalizada" : "Site"}
-                  </div>
-                </a>
-                <div className="p-6">
-                  <p className="text-xs uppercase tracking-[0.18em] text-white/30">{project.category}</p>
-                  <h3 className="mt-2 text-xl font-medium">{project.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-white/45">{project.description}</p>
-                  <a href={project.url} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-white/75 hover:text-white">
-                    Ver projeto <ArrowUpRight size={15} />
-                  </a>
-                </div>
-              </article>
-            ))}
+          <div className="mt-14">
+            <div>
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/35">Sites</p>
+              <div className="mt-6 grid gap-5 md:grid-cols-3">
+                {projects.filter((project) => project.category !== "Bio personalizada").map((project) => (
+                  <article key={project.title} className="group overflow-hidden rounded-3xl border border-white/10 bg-[#090909]">
+                    <a href={project.url} target="_blank" rel="noreferrer" className="relative block aspect-[4/3] overflow-hidden bg-black">
+                      <img
+                        src={`https://api.microlink.io/?url=${encodeURIComponent(project.url)}&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1200&viewport.height=900`}
+                        alt={`Capa do site ${project.title}`}
+                        className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/80 to-transparent" />
+                      <div className="absolute left-4 top-4 rounded-full border border-white/15 bg-black/60 px-3 py-1 text-xs text-white/70 backdrop-blur-sm">
+                        Site
+                      </div>
+                    </a>
+                    <div className="p-6">
+                      <p className="text-xs uppercase tracking-[0.18em] text-white/30">{project.category}</p>
+                      <h3 className="mt-2 text-xl font-medium">{project.title}</h3>
+                      <p className="mt-2 text-sm leading-6 text-white/45">{project.description}</p>
+                      <a href={project.url} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-white/75 hover:text-white">
+                        Ver projeto <ArrowUpRight size={15} />
+                      </a>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-20 border-t border-white/10 pt-14">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/35">Bio personalizada</p>
+              <p className="mt-3 max-w-xl text-sm leading-6 text-white/40">Links personalizados para Instagram e redes sociais, reunindo informações e canais importantes em uma única página.</p>
+              <div className="mt-6 grid gap-5 md:grid-cols-3">
+                {projects.filter((project) => project.category === "Bio personalizada").map((project) => (
+                  <article key={project.title} className="group overflow-hidden rounded-3xl border border-white/10 bg-[#090909]">
+                    <a href={project.url} target="_blank" rel="noreferrer" className="relative block aspect-[4/3] overflow-hidden bg-black">
+                      <img
+                        src={`https://api.microlink.io/?url=${encodeURIComponent(project.url)}&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1200&viewport.height=900`}
+                        alt={`Capa da bio personalizada ${project.title}`}
+                        className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/80 to-transparent" />
+                      <div className="absolute left-4 top-4 rounded-full border border-white/15 bg-black/60 px-3 py-1 text-xs text-white/70 backdrop-blur-sm">
+                        Bio personalizada
+                      </div>
+                    </a>
+                    <div className="p-6">
+                      <p className="text-xs uppercase tracking-[0.18em] text-white/30">Bio personalizada</p>
+                      <h3 className="mt-2 text-xl font-medium">{project.title}</h3>
+                      <p className="mt-2 text-sm leading-6 text-white/45">{project.description}</p>
+                      <a href={project.url} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-white/75 hover:text-white">
+                        Ver projeto <ArrowUpRight size={15} />
+                      </a>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
