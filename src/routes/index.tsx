@@ -44,7 +44,7 @@ const projects = [
     description: "Projeto desenvolvido para apresentar a presença profissional e os principais conteúdos do cliente.",
     url: "https://susapeaugusto.com.br/",
   },
-];
+]
 
 function Index() {
   return (
