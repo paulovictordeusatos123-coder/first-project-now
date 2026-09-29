@@ -192,7 +192,7 @@ function Index() {
 
       <section id="servicos" className="border-t border-white/10 bg-[#080808]">
         <div className="mx-auto max-w-6xl px-5 py-24 lg:px-8">
-          <div className="max-w-2xl"><p className="text-xs uppercase tracking-[0.25em] text-white/35">Serviços</p><h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">Soluções digitais para colocar sua marca no lugar certo.</h2></div>
+          <div className="max-w-2xl"><p className="text-4xl font-semibold tracking-tight sm:text-5xl">Serviços</p><h2 className="mt-4 text-sm font-medium uppercase tracking-[0.2em] text-white/35">Soluções digitais para colocar sua marca no lugar certo.</h2></div>
           <div className="mt-14 grid gap-4 md:grid-cols-3">{services.map(({ icon: Icon, title, text }) => <article key={title} className="group rounded-3xl border border-white/10 bg-white/[0.025] p-7 transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.045]"><div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.05]"><Icon size={19} className="text-white/70" /></div><h3 className="mt-8 text-xl font-medium">{title}</h3><p className="mt-3 text-sm leading-6 text-white/45">{text}</p></article>)}</div>
         </div>
       </section>
