@@ -205,16 +205,14 @@ function Index() {
 
       <section id="projetos" className="border-t border-white/10">
         <div className="mx-auto max-w-6xl px-5 py-24 lg:px-8">
-          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-white/35">Portfólio</p>
-              <h2 className="mt-4 text-sm font-medium uppercase tracking-[0.2em] text-white/35">Websites</h2>
-            </div>
-            <p className="max-w-md text-sm leading-6 text-white/40">Uma seleção de projetos desenvolvidos para profissionais e negócios que querem apresentar seu trabalho de forma mais profissional na internet.</p>
+          <div>
+            <p className="text-base font-medium uppercase tracking-[0.2em] text-white/55">Portfólio</p>
+            <h2 className="mt-4 text-sm font-medium uppercase tracking-[0.2em] text-white/35">Websites</h2>
+            <p className="mt-3 max-w-xl text-sm leading-6 text-white/40">Sites profissionais desenvolvidos para apresentar marcas, profissionais e negócios de forma moderna, clara e profissional na internet.</p>
           </div>
           <div className="mt-14">
             <div>
-                <div className="mt-6 grid gap-5 md:grid-cols-3">
+              <div className="mt-6 grid gap-5 md:grid-cols-3">
                 {projects.filter((project) => project.category !== "Bio personalizada").map((project) => (
                   <article key={project.title} className="group overflow-hidden rounded-3xl border border-white/10 bg-[#090909]">
                     <a href={project.url} target="_blank" rel="noreferrer" className="relative block aspect-[4/3] overflow-hidden bg-black">
@@ -327,7 +325,7 @@ function Index() {
           <h2 className="mx-auto mt-4 max-w-3xl text-4xl font-semibold tracking-tight sm:text-6xl">Tem uma ideia? Vamos transformar em algo profissional.</h2>
           <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-white/45">Entre em contato para conversar sobre seu site, seu link personalizado ou suas fotos com IA.</p>
           <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-            <a href="https://wa.me/" className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-black transition hover:scale-[1.02]">
+            <a href="https://wa.me/5584921668965?text=Ol%C3%A1%2C%20Paulo%21%20gostaria%20de%20realizar%20um%20projeto%20contigo" className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-black transition hover:scale-[1.02]">
               <MessageCircle size={17} /> WhatsApp
             </a>
             <a href="#" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-3.5 text-sm font-medium text-white/75 transition hover:border-white/30 hover:bg-white/[0.05]">
