@@ -80,9 +80,6 @@ function Index() {
             <h1 className="max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-8xl">
               Seu trabalho merece ser visto da melhor forma!
             </h1>
-            <p className="mt-7 max-w-2xl text-base leading-7 text-white/55 sm:text-lg">
-              Eu sou <strong className="font-medium text-white">Paulo Moraes</strong>. Há cerca de 2 anos crio sites, links personalizados para redes sociais e imagens com IA para profissionais autônomos e empresas.
-            </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a href="#projetos" className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-black transition hover:scale-[1.02]">
                 Ver meu portfólio <ArrowUpRight size={17} className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
