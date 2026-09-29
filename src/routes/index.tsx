@@ -193,7 +193,7 @@ function Index() {
                   />
                   <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/80 to-transparent" />
                   <div className="absolute left-4 top-4 rounded-full border border-white/15 bg-black/60 px-3 py-1 text-xs text-white/70 backdrop-blur-sm">
-                    Site
+                    {project.category === "Bio personalizada" ? "Bio personalizada" : "Site"}
                   </div>
                 </a>
                 <div className="p-6">
