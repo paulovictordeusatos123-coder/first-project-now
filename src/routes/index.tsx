@@ -44,6 +44,12 @@ const projects = [
     description: "Projeto desenvolvido para apresentar a presença profissional e os principais conteúdos do cliente.",
     url: "https://susapeaugusto.com.br/",
   },
+  {
+    title: "Grupo Vertice",
+    category: "Site profissional",
+    description: "Site profissional desenvolvido para apresentar o negócio e seus serviços.",
+    url: "http://grupovertice.rmbuilder.site/vertice-auto-center",
+  },
 ]
 
 function Index() {
