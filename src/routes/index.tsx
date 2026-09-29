@@ -201,8 +201,7 @@ function Index() {
           </div>
           <div className="mt-14">
             <div>
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/35">Websites</p>
-              <div className="mt-6 grid gap-5 md:grid-cols-3">
+                <div className="mt-6 grid gap-5 md:grid-cols-3">
                 {projects.filter((project) => project.category !== "Bio personalizada").map((project) => (
                   <article key={project.title} className="group overflow-hidden rounded-3xl border border-white/10 bg-[#090909]">
                     <a href={project.url} target="_blank" rel="noreferrer" className="relative block aspect-[4/3] overflow-hidden bg-black">
