@@ -25,6 +25,19 @@ const services = [
 
 const photoTypes = ["Formatura", "Aniversário", "Profissões", "Gestação", "Retratos profissionais", "Conteúdo para redes sociais"];
 
+const aiPhotos = [
+  {
+    url: "https://images.pexels.com/photos/37094847/pexels-photo-37094847.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    alt: "Sedã preto elegante em uma rua urbana arborizada",
+    credit: "Thang Nguyen",
+  },
+  {
+    url: "https://images.pexels.com/photos/39733041/pexels-photo-39733041.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    alt: "Closet elegante com portas de vidro e piso de madeira",
+    credit: "shaza jocarlos",
+  },
+];
+
 const projects = [
   {
     title: "Jéssica Luana",
@@ -276,6 +289,21 @@ function Index() {
                 <span key={type} className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-white/60">{type}</span>
               ))}
             </div>
+            <div className="mt-10 grid gap-5 sm:grid-cols-2">
+              {aiPhotos.map((photo) => (
+                <figure key={photo.url} className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.025]">
+                  <img
+                    src={photo.url}
+                    alt={photo.alt}
+                    className="aspect-[4/3] w-full object-cover transition duration-500 hover:scale-[1.03]"
+                    loading="lazy"
+                  />
+                  <figcaption className="p-4 text-xs text-white/40">
+                    Foto: {photo.credit} / Pexels
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -313,6 +341,7 @@ function Index() {
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-7 text-sm text-white/35 sm:flex-row sm:items-center sm:justify-between lg:px-8">
           <span>Paulo Moraes</span>
           <span>© 2026 — Criação digital, sites e imagens com IA.</span>
+          <span>Fotos: Thang Nguyen e shaza jocarlos / Pexels</span>
         </div>
       </footer>
     </main>
