@@ -179,7 +179,7 @@ function Index() {
       <section id="sobre" className="border-t border-white/10">
         <div className="mx-auto grid max-w-6xl gap-12 px-5 py-24 lg:grid-cols-[0.7fr_1.3fr] lg:px-8">
           <div><p className="text-xs uppercase tracking-[0.25em] text-white/35">Sobre mim</p><h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">Prazer, eu sou Paulo.</h2></div>
-          <div className="max-w-2xl"><p className="text-xl leading-8 text-white/70">Trabalho há mais de 2 anos com criação de sites e marketing digital, ajudando profissionais e empresas a fortalecerem sua presença na internet.</p><p className="mt-5 text-base leading-7 text-white/40">Gosto de criar sites que tenham a cara de cada cliente e ajudem a mostrar seu trabalho do jeito que ele merece. Também trabalho com marketing digital para ajudar negócios a terem mais presença na internet.</p></div>
+          <div className="max-w-2xl"><p className="text-xl leading-8 text-white/70">Trabalho há mais de 2 anos com criação de sites e marketing digital, ajudando profissionais e empresas a fortalecerem sua presença na internet.</p><p className="mt-5 text-base leading-7 text-white/40">Acredito que cada profissional, marca ou negócio merece uma presença digital à altura do seu trabalho. Para auxiliar nisso, ofereço soluções personalizadas como criação de sites e websites, links personalizados e fotos profissionais desenvolvidas com inteligência artificial. Tudo pensado para valorizar sua imagem e fortalecer sua presença online, ampliando a visibilidade do seu trabalho e negócio.</p></div>
         </div>
       </section>
 
