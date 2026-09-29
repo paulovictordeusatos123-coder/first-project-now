@@ -80,6 +80,24 @@ const projects = [
     description: "Link personalizado para reunir informações e canais de contato em um só lugar.",
     url: "https://fluxostudio.my.canva.site/modelo03",
   },
+  {
+    title: "Bio personalizada - Advogada",
+    category: "Bio personalizada",
+    description: "Link personalizado desenvolvido para apresentação profissional e contato.",
+    url: "https://fluxostudio.my.canva.site/c-pia-de-advoagada",
+  },
+  {
+    title: "Bio personalizada - Pizzaria",
+    category: "Bio personalizada",
+    description: "Link personalizado desenvolvido para apresentação do negócio e canais de contato.",
+    url: "https://fluxostudio.my.canva.site/c-pia-de-pizzaria",
+  },
+  {
+    title: "Bio personalizada - Confeiteira",
+    category: "Bio personalizada",
+    description: "Link personalizado desenvolvido para apresentação profissional e divulgação.",
+    url: "https://fluxostudio.my.canva.site/c-pia-de-confeiteira",
+  },
 ]
 
 function Index() {
