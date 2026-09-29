@@ -1,7 +1,18 @@
-import { ArrowUpRight, BriefcaseBusiness, Camera, Check, Instagram, Link2, MessageCircle, Sparkles, WandSparkles } from "lucide-react";
+import { ArrowUpRight, BriefcaseBusiness, Instagram, Link2, MessageCircle, WandSparkles } from "lucide-react";
 import { createFileRoute } from "@tanstack/react-router";
+import logoAsset from "@/assets/paulo-moraes-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Paulo Moraes — Sites, Links e Fotos com IA" },
+      { name: "description", content: "Portfólio de Paulo Moraes: criação de sites, links personalizados para redes sociais e fotos com inteligência artificial." },
+      { property: "og:title", content: "Paulo Moraes — Criação Digital" },
+      { property: "og:description", content: "Sites profissionais, links personalizados e fotos com IA." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
@@ -143,11 +154,8 @@ function Index() {
             </div>
           </div>
           <div className="relative mx-auto w-full max-w-md">
-            <div className="aspect-[4/5] rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.1] via-white/[0.03] to-transparent p-3 shadow-2xl shadow-black">
-              <div className="flex h-full flex-col justify-between rounded-[1.5rem] border border-white/10 bg-[#0a0a0a] p-7">
-                <div className="flex items-center justify-between"><div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.05]"><Sparkles size={20} className="text-white/70" /></div><span className="text-xs uppercase tracking-[0.2em] text-white/35">PM / 2026</span></div>
-                <div><p className="text-sm text-white/35">O que eu crio</p><p className="mt-3 text-3xl font-medium tracking-tight">Sites que apresentam. Imagens que valorizam.</p><div className="mt-8 space-y-3">{["Websites profissionais", "Links para Instagram", "Fotos criativas com IA"].map((item) => <div key={item} className="flex items-center gap-3 text-sm text-white/65"><Check size={15} className="text-white/50" /> {item}</div>)}</div></div>
-              </div>
+            <div className="aspect-square overflow-hidden rounded-[2rem] border border-white/10 bg-[#080808] shadow-2xl shadow-black">
+              <img src={logoAsset.url} alt="Paulo Moraes Digital Creative Studio" className="h-full w-full object-cover" fetchPriority="high" />
             </div>
           </div>
         </div>
