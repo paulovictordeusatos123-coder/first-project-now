@@ -136,7 +136,7 @@ function Index() {
         </div>
       </header>
 
-      <section id="inicio" className="relative flex min-h-screen items-center pt-28">
+      <section id="inicio" className="relative flex min-h-screen items-center pt-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_35%,rgba(255,255,255,0.09),transparent_30%),radial-gradient(circle_at_15%_80%,rgba(255,255,255,0.04),transparent_28%)]" />
         <div className="relative mx-auto grid max-w-6xl gap-14 px-5 py-20 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:px-8">
           <div>
