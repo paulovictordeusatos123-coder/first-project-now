@@ -62,6 +62,24 @@ const projects = [
     description: "Site profissional desenvolvido para apresentar a marca e seus produtos.",
     url: "https://rgrelogios.lovable.app/",
   },
+  {
+    title: "Bio personalizada 01",
+    category: "Bio personalizada",
+    description: "Link personalizado para reunir informações e canais de contato em um só lugar.",
+    url: "https://fluxostudio.my.canva.site/modelo01",
+  },
+  {
+    title: "Bio personalizada 02",
+    category: "Bio personalizada",
+    description: "Link personalizado para reunir informações e canais de contato em um só lugar.",
+    url: "https://fluxostudio.my.canva.site/modelo02",
+  },
+  {
+    title: "Bio personalizada 03",
+    category: "Bio personalizada",
+    description: "Link personalizado para reunir informações e canais de contato em um só lugar.",
+    url: "https://fluxostudio.my.canva.site/modelo03",
+  },
 ]
 
 function Index() {
