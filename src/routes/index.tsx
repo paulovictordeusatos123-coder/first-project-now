@@ -195,7 +195,7 @@ function Index() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
               <p className="text-xs uppercase tracking-[0.25em] text-white/35">Portfólio</p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">Projetos selecionados</h2>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">Websites</h2>
             </div>
             <p className="max-w-md text-sm leading-6 text-white/40">Uma seleção de projetos desenvolvidos para profissionais e negócios que querem apresentar seu trabalho de forma mais profissional na internet.</p>
           </div>
