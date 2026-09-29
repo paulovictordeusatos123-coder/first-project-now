@@ -316,7 +316,7 @@ function Index() {
           </div>
           <div className="max-w-2xl">
             <p className="text-xl leading-8 text-white/70">Trabalho há mais de 2 anos com criação de sites e marketing digital, ajudando profissionais e empresas a fortalecerem sua presença na internet.</p>
-            <p className="mt-5 text-base leading-7 text-white/40">Meu trabalho é criar sites profissionais e soluções digitais que ajudam marcas e negócios a se apresentarem melhor, com mais clareza e presença no ambiente online.</p>
+            <p className="mt-5 text-base leading-7 text-white/40">Gosto de criar sites que tenham a cara de cada cliente e ajudem a mostrar seu trabalho do jeito que ele merece. Também trabalho com marketing digital para ajudar negócios a terem mais presença na internet.</p>
           </div>
         </div>
       </section>
