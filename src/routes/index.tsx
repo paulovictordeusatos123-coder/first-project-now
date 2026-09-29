@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ArrowUpRight, BriefcaseBusiness, Instagram, Link2, MessageCircle, WandSparkles } from "lucide-react";
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/paulo-moraes-logo.png.asset.json";
@@ -38,14 +39,29 @@ const photoTypes = ["Formatura", "Aniversário", "Gestação", "Retratos de mome
 
 const aiPhotos = [
   {
-    url: "https://images.pexels.com/photos/4963417/pexels-photo-4963417.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    alt: "Dois profissionais caminhando com confiança por uma rua da cidade",
-    credit: "Ketut Subiyanto",
+    url: aniversarioAsset.url,
+    type: "Aniversário",
+    alt: "Mulher com vestido preto segurando balões dourados com os números 32",
   },
   {
-    url: "https://images.pexels.com/photos/7888760/pexels-photo-7888760.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    alt: "Equipe de escritório reunida em uma conversa colaborativa ao redor de um notebook",
-    credit: "RDNE Stock project",
+    url: gestacaoAsset.url,
+    type: "Gestação",
+    alt: "Casal em ensaio de gestante, com o marido abraçando a barriga da esposa",
+  },
+  {
+    url: formaturaAsset.url,
+    type: "Formatura",
+    alt: "Formando em Medicina com beca branca, capelo e canudo verde",
+  },
+  {
+    url: familiaNatalAsset.url,
+    type: "Retratos de momentos",
+    alt: "Família de pijamas vermelhos em retrato de Natal ao lado da árvore",
+  },
+  {
+    url: casalGramadoAsset.url,
+    type: "Retratos de momentos",
+    alt: "Casal sorrindo em frente ao mural de corações em Gramado",
   },
 ];
 
