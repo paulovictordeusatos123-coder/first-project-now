@@ -23,7 +23,7 @@ const services = [
   },
 ];
 
-const photoTypes = ["Formatura", "Aniversário", "Profissões", "Gestação", "Retratos profissionais", "Conteúdo para redes sociais"];
+const photoTypes = ["Formatura", "Aniversário", "Gestação", "Retratos profissionais"];
 
 const aiPhotos = [
   {
