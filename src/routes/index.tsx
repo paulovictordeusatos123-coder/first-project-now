@@ -315,8 +315,8 @@ function Index() {
             <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">Prazer, eu sou Paulo.</h2>
           </div>
           <div className="max-w-2xl">
-            <p className="text-xl leading-8 text-white/70">Há cerca de 2 anos trabalho com criação digital, ajudando profissionais autônomos e empresas a terem uma apresentação mais profissional na internet.</p>
-            <p className="mt-5 text-base leading-7 text-white/40">Meu trabalho une design, tecnologia e criatividade para criar experiências simples de entender e bonitas de apresentar — desde um site completo até uma página personalizada para o Instagram ou uma imagem criada com IA.</p>
+            <p className="text-xl leading-8 text-white/70">Trabalho há mais de 2 anos com criação de sites e marketing digital, ajudando profissionais e empresas a fortalecerem sua presença na internet.</p>
+            <p className="mt-5 text-base leading-7 text-white/40">Meu trabalho é criar sites profissionais e soluções digitais que ajudam marcas e negócios a se apresentarem melhor, com mais clareza e presença no ambiente online.</p>
           </div>
         </div>
       </section>
