@@ -175,7 +175,7 @@ function Index() {
         <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-[100]">
           <div className="intro-panel intro-panel-top absolute inset-x-0 top-0 h-1/2 bg-[#050505]" />
           <div className="intro-panel intro-panel-bottom absolute inset-x-0 bottom-0 h-1/2 bg-[#050505]" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-7">
+          <div className="intro-content absolute inset-0 flex flex-col items-center justify-center gap-7">
             <div className="relative flex h-40 w-40 items-center justify-center">
               <div className="intro-glow absolute inset-0 rounded-full bg-white/20 blur-3xl" />
               <img src={logoAsset.url} alt="" className="intro-logo relative h-32 w-32 rounded-3xl border border-white/15 object-cover shadow-2xl shadow-black" />
