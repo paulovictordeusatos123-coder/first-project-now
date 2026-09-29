@@ -7,6 +7,7 @@ import gestacaoAsset from "@/assets/foto-gestacao.png.asset.json";
 import formaturaAsset from "@/assets/foto-formatura.png.asset.json";
 import familiaNatalAsset from "@/assets/foto-familia-natal.png.asset.json";
 import casalGramadoAsset from "@/assets/foto-casal-gramado.png.asset.json";
+import bebeBailarinaAsset from "@/assets/foto-bebe-bailarina.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
