@@ -27,9 +27,9 @@ const photoTypes = ["Formatura", "Aniversário", "Profissões", "Gestação", "R
 
 const projects = [
   {
-    title: "Hug of Code",
-    category: "Web Design",
-    description: "Site desenvolvido para apresentar um projeto com uma experiência digital moderna e profissional.",
+    title: "Jéssica Luana",
+    category: "Maquiadora",
+    description: "Site profissional desenvolvido para apresentar o trabalho, os serviços e a presença digital da maquiadora.",
     url: "https://hug-of-code-25.lovable.app/",
   },
   {
@@ -148,14 +148,17 @@ function Index() {
           <div className="mt-14 grid gap-5 md:grid-cols-3">
             {projects.map((project, index) => (
               <article key={project.title} className="group overflow-hidden rounded-3xl border border-white/10 bg-[#090909]">
-                <a href={project.url} target="_blank" rel="noreferrer" className="relative block aspect-[4/3] overflow-hidden bg-gradient-to-br from-white/[0.08] via-[#111] to-black">
-                  <div className="absolute inset-0 grid place-items-center">
-                    <div className="text-center">
-                      <span className="text-5xl font-semibold tracking-tighter text-white/10">0{index + 1}</span>
-                      <p className="mt-2 text-xs uppercase tracking-[0.25em] text-white/30">{project.category}</p>
-                    </div>
+                <a href={project.url} target="_blank" rel="noreferrer" className="relative block aspect-[4/3] overflow-hidden bg-black">
+                  <img
+                    src={`https://api.microlink.io/?url=${encodeURIComponent(project.url)}&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1200&viewport.height=900`}
+                    alt={`Capa do site ${project.title}`}
+                    className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/80 to-transparent" />
+                  <div className="absolute left-4 top-4 rounded-full border border-white/15 bg-black/60 px-3 py-1 text-xs text-white/70 backdrop-blur-sm">
+                    Site
                   </div>
-                  <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/70 to-transparent" />
                 </a>
                 <div className="p-6">
                   <p className="text-xs uppercase tracking-[0.18em] text-white/30">{project.category}</p>
