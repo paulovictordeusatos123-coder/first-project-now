@@ -75,8 +75,7 @@ function Index() {
               Design digital • Sites • IA
             </div>
             <h1 className="max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-8xl">
-              Sua presença digital com mais{" "}
-              <span className="text-white/45">personalidade.</span>
+              Seu trabalho merece ser visto da melhor forma!
             </h1>
             <p className="mt-7 max-w-2xl text-base leading-7 text-white/55 sm:text-lg">
               Eu sou <strong className="font-medium text-white">Paulo Moraes</strong>. Há cerca de 2 anos crio sites, links personalizados para redes sociais e imagens com IA para profissionais autônomos e empresas.
