@@ -184,7 +184,7 @@ function Index() {
           </div>
           <div className="relative mx-auto w-full max-w-md">
             <div className="aspect-square overflow-hidden rounded-[2rem] border border-white/10 bg-[#080808] shadow-2xl shadow-black">
-              <img src={logoAsset.url} alt="Paulo Moraes Digital Creative Studio" className="h-full w-full object-cover" fetchPriority="high" />
+              <img src={logoAsset.url} alt="Paulo Moraes Digital Creative Studio" className="h-full w-full scale-[1.6] object-cover" fetchPriority="high" />
             </div>
           </div>
         </div>
