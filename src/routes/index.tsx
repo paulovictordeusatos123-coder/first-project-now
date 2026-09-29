@@ -33,12 +33,6 @@ const projects = [
     url: "https://hug-of-code-25.lovable.app/",
   },
   {
-    title: "Patrícia Melo Cabeleireira",
-    category: "Site profissional",
-    description: "Site profissional desenvolvido para apresentar os serviços e o trabalho da profissional.",
-    url: "https://patriciamelocabeleireira.lovable.app/",
-  },
-  {
     title: "Susape Augusto",
     category: "Site profissional",
     description: "Projeto desenvolvido para apresentar a presença profissional e os principais conteúdos do cliente.",
