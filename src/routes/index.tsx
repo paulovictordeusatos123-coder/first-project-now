@@ -27,14 +27,14 @@ const photoTypes = ["Formatura", "Aniversário", "Profissões", "Gestação", "R
 
 const aiPhotos = [
   {
-    url: "https://images.pexels.com/photos/37094847/pexels-photo-37094847.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    alt: "Sedã preto elegante em uma rua urbana arborizada",
-    credit: "Thang Nguyen",
+    url: "https://images.pexels.com/photos/4963417/pexels-photo-4963417.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    alt: "Dois profissionais caminhando com confiança por uma rua da cidade",
+    credit: "Ketut Subiyanto",
   },
   {
-    url: "https://images.pexels.com/photos/39733041/pexels-photo-39733041.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    alt: "Closet elegante com portas de vidro e piso de madeira",
-    credit: "shaza jocarlos",
+    url: "https://images.pexels.com/photos/7888760/pexels-photo-7888760.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    alt: "Equipe de escritório reunida em uma conversa colaborativa ao redor de um notebook",
+    credit: "RDNE Stock project",
   },
 ];
 
@@ -341,7 +341,7 @@ function Index() {
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-7 text-sm text-white/35 sm:flex-row sm:items-center sm:justify-between lg:px-8">
           <span>Paulo Moraes</span>
           <span>© 2026 — Criação digital, sites e imagens com IA.</span>
-          <span>Fotos: Thang Nguyen e shaza jocarlos / Pexels</span>
+          <span>Fotos: Ketut Subiyanto e RDNE Stock project / Pexels</span>
         </div>
       </footer>
     </main>
