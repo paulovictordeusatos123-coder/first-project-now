@@ -27,19 +27,22 @@ const photoTypes = ["Formatura", "Aniversário", "Profissões", "Gestação", "R
 
 const projects = [
   {
-    title: "Site profissional",
+    title: "Hug of Code",
     category: "Web Design",
-    description: "Projeto demonstrativo para apresentar serviços, portfólio e contato.",
+    description: "Site desenvolvido para apresentar um projeto com uma experiência digital moderna e profissional.",
+    url: "https://hug-of-code-25.lovable.app/",
   },
   {
-    title: "Link personalizado",
-    category: "Social",
-    description: "Página enxuta e estratégica para centralizar Instagram, WhatsApp e outros canais.",
+    title: "Patrícia Melo Cabeleireira",
+    category: "Site profissional",
+    description: "Site profissional desenvolvido para apresentar os serviços e o trabalho da profissional.",
+    url: "https://patriciamelocabeleireira.lovable.app/",
   },
   {
-    title: "Fotos com IA",
-    category: "AI Creative",
-    description: "Imagens personalizadas para valorizar profissionais e ocasiões especiais.",
+    title: "Susape Augusto",
+    category: "Site profissional",
+    description: "Projeto desenvolvido para apresentar a presença profissional e os principais conteúdos do cliente.",
+    url: "https://susapeaugusto.com.br/",
   },
 ];
 
@@ -143,26 +146,26 @@ function Index() {
               <p className="text-xs uppercase tracking-[0.25em] text-white/35">Portfólio</p>
               <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">Projetos selecionados</h2>
             </div>
-            <p className="max-w-md text-sm leading-6 text-white/40">Esta área fica preparada para receber seus trabalhos reais, com imagem, descrição e link para cada projeto.</p>
+            <p className="max-w-md text-sm leading-6 text-white/40">Uma seleção de projetos desenvolvidos para profissionais e negócios que querem apresentar seu trabalho de forma mais profissional na internet.</p>
           </div>
           <div className="mt-14 grid gap-5 md:grid-cols-3">
             {projects.map((project, index) => (
               <article key={project.title} className="group overflow-hidden rounded-3xl border border-white/10 bg-[#090909]">
-                <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-white/[0.08] via-[#111] to-black">
+                <a href={project.url} target="_blank" rel="noreferrer" className="relative block aspect-[4/3] overflow-hidden bg-gradient-to-br from-white/[0.08] via-[#111] to-black">
                   <div className="absolute inset-0 grid place-items-center">
                     <div className="text-center">
                       <span className="text-5xl font-semibold tracking-tighter text-white/10">0{index + 1}</span>
                       <p className="mt-2 text-xs uppercase tracking-[0.25em] text-white/30">{project.category}</p>
                     </div>
-                  </div>
+                  </a>
                   <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/70 to-transparent" />
                 </div>
                 <div className="p-6">
                   <p className="text-xs uppercase tracking-[0.18em] text-white/30">{project.category}</p>
                   <h3 className="mt-2 text-xl font-medium">{project.title}</h3>
                   <p className="mt-2 text-sm leading-6 text-white/45">{project.description}</p>
-                  <a href="#contato" className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-white/75 hover:text-white">
-                    Quero um projeto assim <ArrowUpRight size={15} />
+                  <a href={project.url} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-white/75 hover:text-white">
+                    Ver projeto <ArrowUpRight size={15} />
                   </a>
                 </div>
               </article>
