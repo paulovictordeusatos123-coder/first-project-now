@@ -146,6 +146,8 @@ const projects = [
 ]
 
 function Index() {
+  const [photoFilter, setPhotoFilter] = useState<string | null>(null);
+  const visiblePhotos = photoFilter ? aiPhotos.filter((photo) => photo.type === photoFilter) : aiPhotos;
   return (
     <main className="min-h-screen overflow-hidden bg-[#050505] text-white">
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#050505]/80 backdrop-blur-xl">
