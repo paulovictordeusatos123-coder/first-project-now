@@ -1,6 +1,12 @@
+import { useState } from "react";
 import { ArrowUpRight, BriefcaseBusiness, Instagram, Link2, MessageCircle, WandSparkles } from "lucide-react";
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/paulo-moraes-logo.png.asset.json";
+import aniversarioAsset from "@/assets/foto-aniversario.png.asset.json";
+import gestacaoAsset from "@/assets/foto-gestacao.png.asset.json";
+import formaturaAsset from "@/assets/foto-formatura.png.asset.json";
+import familiaNatalAsset from "@/assets/foto-familia-natal.png.asset.json";
+import casalGramadoAsset from "@/assets/foto-casal-gramado.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -38,14 +44,29 @@ const photoTypes = ["Formatura", "Aniversário", "Gestação", "Retratos de mome
 
 const aiPhotos = [
   {
-    url: "https://images.pexels.com/photos/4963417/pexels-photo-4963417.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    alt: "Dois profissionais caminhando com confiança por uma rua da cidade",
-    credit: "Ketut Subiyanto",
+    url: aniversarioAsset.url,
+    type: "Aniversário",
+    alt: "Mulher com vestido preto segurando balões dourados com os números 32",
   },
   {
-    url: "https://images.pexels.com/photos/7888760/pexels-photo-7888760.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    alt: "Equipe de escritório reunida em uma conversa colaborativa ao redor de um notebook",
-    credit: "RDNE Stock project",
+    url: gestacaoAsset.url,
+    type: "Gestação",
+    alt: "Casal em ensaio de gestante, com o marido abraçando a barriga da esposa",
+  },
+  {
+    url: formaturaAsset.url,
+    type: "Formatura",
+    alt: "Formando em Medicina com beca branca, capelo e canudo verde",
+  },
+  {
+    url: familiaNatalAsset.url,
+    type: "Retratos de momentos",
+    alt: "Família de pijamas vermelhos em retrato de Natal ao lado da árvore",
+  },
+  {
+    url: casalGramadoAsset.url,
+    type: "Retratos de momentos",
+    alt: "Casal sorrindo em frente ao mural de corações em Gramado",
   },
 ];
 
@@ -125,6 +146,8 @@ const projects = [
 ]
 
 function Index() {
+  const [photoFilter, setPhotoFilter] = useState<string | null>(null);
+  const visiblePhotos = photoFilter ? aiPhotos.filter((photo) => photo.type === photoFilter) : aiPhotos;
   return (
     <main className="min-h-screen overflow-hidden bg-[#050505] text-white">
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#050505]/80 backdrop-blur-xl">
@@ -180,7 +203,7 @@ function Index() {
       <section className="border-y border-white/10 bg-[#080808]">
         <div className="mx-auto grid max-w-6xl gap-14 px-5 py-24 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
           <div><p className="text-xs uppercase tracking-[0.25em] text-white/35">Fotos com IA</p><h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">Imagens pensadas para você se apresentar melhor.</h2></div>
-          <div><p className="text-base leading-7 text-white/50">Também crio fotos personalizadas com inteligência artificial para profissionais e momentos importantes, com propostas visuais que podem ser usadas nas redes sociais, divulgação e apresentação pessoal.</p><div className="mt-8 flex flex-wrap gap-2">{photoTypes.map((type) => <span key={type} className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-white/60">{type}</span>)}</div><div className="mt-10 grid gap-5 sm:grid-cols-2">{aiPhotos.map((photo) => <figure key={photo.url} className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.025]"><img src={photo.url} alt={photo.alt} className="aspect-[4/3] w-full object-cover transition duration-500 hover:scale-[1.03]" loading="lazy" /><figcaption className="p-4 text-xs text-white/40">Foto: {photo.credit} / Pexels</figcaption></figure>)}</div></div>
+          <div><p className="text-base leading-7 text-white/50">Também crio fotos personalizadas com inteligência artificial para profissionais e momentos importantes, com propostas visuais que podem ser usadas nas redes sociais, divulgação e apresentação pessoal.</p><div className="mt-8 flex flex-wrap gap-2">{photoTypes.map((type) => <button key={type} type="button" onClick={() => setPhotoFilter((current) => (current === type ? null : type))} className={`rounded-full border px-4 py-2 text-sm transition ${photoFilter === type ? "border-white bg-white text-black" : "border-white/10 bg-white/[0.03] text-white/60 hover:border-white/30 hover:text-white"}`}>{type}</button>)}</div><div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{visiblePhotos.map((photo) => <figure key={photo.url} className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.025]"><img src={photo.url} alt={photo.alt} className="aspect-[3/4] w-full object-cover transition duration-500 hover:scale-[1.03]" loading="lazy" /><figcaption className="p-4 text-xs uppercase tracking-[0.15em] text-white/45">{photo.type}</figcaption></figure>)}</div></div>
         </div>
       </section>
 
@@ -204,7 +227,7 @@ function Index() {
       </section>
 
       <footer className="border-t border-white/10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-7 text-sm text-white/35 sm:flex-row sm:items-center sm:justify-between lg:px-8"><span>Paulo Moraes</span><span>© 2026 — Criação digital, sites e imagens com IA.</span><span>Fotos: Ketut Subiyanto e RDNE Stock project / Pexels</span></div>
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-7 text-sm text-white/35 sm:flex-row sm:items-center sm:justify-between lg:px-8"><span>© 2026 — Criação digital, sites e imagens com IA.</span><span>Imagens geradas com inteligência artificial.</span></div>
       </footer>
     </main>
   );
