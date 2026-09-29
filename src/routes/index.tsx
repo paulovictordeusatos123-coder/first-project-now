@@ -131,7 +131,6 @@ function Index() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8">
           <a href="#inicio" className="flex items-center gap-3">
             <img src={logoAsset.url} alt="Logo Paulo Moraes" className="h-10 w-10 rounded-xl border border-white/15 object-cover" />
-            <span className="text-lg font-semibold tracking-tight">Paulo <span className="text-white/45">Moraes</span></span>
           </a>
           <nav className="hidden items-center gap-7 text-sm text-white/60 md:flex">
             <a href="#servicos" className="transition hover:text-white">Serviços</a>
